@@ -27,16 +27,6 @@ try {
             $newFileName = uniqid() . '.' . $imageFileType;
             $target_file = $target_dir . $newFileName;
 
-            // Check if image file is a actual image or fake image
-            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-            if ($check === false) {
-                throw new Exception('File is not an image.');
-            }
-
-            // Check file size
-            if ($_FILES["fileToUpload"]["size"] > 5000000) {
-                throw new Exception('Sorry, your file is too large.');
-            }
 
             // Allow certain file formats
             if (!in_array($imageFileType, ["jpg", "jpeg", "png", "gif"])) {

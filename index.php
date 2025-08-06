@@ -1,5 +1,5 @@
 <?php
-$title = 'Internet Joke Database';
+$title = ' Student Home Page';
 ob_start();
 include 'Guest/home.html.php';
 $output = ob_get_clean();

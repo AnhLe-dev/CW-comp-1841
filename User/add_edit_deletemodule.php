@@ -5,12 +5,7 @@ try {
     include '../include/DatabaseFunctions.php';
 
 
-    // Get all modules
-    $sql = 'SELECT * FROM module ORDER BY nameModule';
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    $modules = $stmt->fetchAll();
-    
+   $modules = getAllModules($pdo);
     $title = 'Module Management';
 
     ob_start();

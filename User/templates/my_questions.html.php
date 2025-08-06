@@ -14,7 +14,6 @@
         <?php endif; ?>
     </div>
     
-    <p class="total-posts"><?=$totalposts?> Questions have been posted</p>
 
     <?php foreach($posts as $post): ?>
         <div class="question-card">
